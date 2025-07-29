@@ -6,6 +6,11 @@ API_KEY = st.secrets["openai_api_key"]
 with st.sidebar:
     st.subheader("HighAI")
 
+st.set_page_config(
+    page_title="HighAI",
+    page_icon="🎓",
+    layout="centered"
+)
 
 st.title("💬 진로 추천 받기")
 st.caption("😀 **사용 방법:** 채팅창에 당신의 **관심사**, **성향**, **좋아하는 활동** 등을 자유롭게 입력해주세요.  \n 😍 **작성 예시:**  물리가 정말 좋아요 💡 MBTI는 ENFP예요!🌟 만드는 걸 좋아해요🔨")

@@ -9,8 +9,11 @@ API_KEY = st.secrets["openai_api_key"]
 with st.sidebar:
     st.subheader("HighAI")
 
-st.set_page_config(page_title="종합 전형 대학 찾기")
-
+st.set_page_config(
+    page_title="HighAI",
+    page_icon="🎓",
+    layout="centered"
+)
 
 st.title("💬 종합 전형 대학 찾기")
 st.caption("**✅ 사용방법 :** 희망 전공과 본인의 내신 등급을 입력하고 '지원 대학 검색' 버튼을 눌러주세요.  \n **⚠️ 주의사항 :** 검색 결과는 참고용이며, 반드시 담임 선생님과 상담하여 신중하게 결정하세요.")

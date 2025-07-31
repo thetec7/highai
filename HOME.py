@@ -9,8 +9,8 @@ st.set_page_config(
     layout="centered"
 )
 
-st.markdown("<h1 style='text-align: center; color: black; font-size: 5em; display: block; margin: 0 auto;'>HighAI</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 1.4em; color: black; display: block; margin: 0 auto;'>무엇을 도와드릴까요?</p>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size: 5em; display: block; margin: 0 auto;'>HighAI</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 1.4em; display: block; margin: 0 auto;'>무엇을 도와드릴까요?</p>", unsafe_allow_html=True)
 
 st.markdown("<br> <br>", unsafe_allow_html=True)
 

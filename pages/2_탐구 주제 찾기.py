@@ -67,8 +67,8 @@ def main():
 ※ 현실적으로 수행 가능한 고등학생 수준의 탐구를 기반으로, 교육과정 및 대입 전형에서 활용 가능한 방식으로 제안해주세요.
 """
 
-            gpt_response = ask_gpt(prompt, API_KEY)
-            parsed = gpt_response(gpt_response)
+            output = ask_gpt(prompt, API_KEY)
+            parsed = gpt_response(output)
 
             if parsed:
                 st.markdown("---")

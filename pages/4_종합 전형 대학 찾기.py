@@ -15,7 +15,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("💬 종합 전형 대학 찾기")
+st.header("💬 종합 전형 대학 찾기")
 st.caption("**✅ 사용방법 :** 희망 전공과 본인의 내신 등급을 입력하고 '지원 대학 검색' 버튼을 눌러주세요.  \n **⚠️ 주의사항 :** 검색 결과는 참고용이며, 반드시 담임 선생님과 상담하여 신중하게 결정하세요.")
 
 def ask_gpt(prompt, api_key):

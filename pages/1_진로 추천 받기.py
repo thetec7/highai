@@ -12,7 +12,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("💬 진로 추천 받기")
+st.header("💬 진로 추천 받기")
 st.caption("😀 **사용 방법:** 채팅창에 당신의 **관심사**, **성향**, **좋아하는 활동** 등을 자유롭게 입력해주세요.  \n 😍 **작성 예시:**  물리가 정말 좋아요 💡 MBTI는 ENFP예요!🌟 만드는 걸 좋아해요🔨")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "안녕하세요! 저는 고등학생 여러분의 진로 고민을 함께 나누고, 여러분의 꿈을 찾아가는 데 도움을 드리는 진로 상담 챗봇입니다."}]

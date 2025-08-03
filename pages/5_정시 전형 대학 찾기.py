@@ -111,7 +111,7 @@ def main():
                         })
                         table_data['년도'] = table_data['년도'].astype(str)
                         table_data['70% 백분위'] = table_data['70% 백분위'].map('{:.1f}'.format)
-                        st.dataframe(table_data, hide_index=True, use_container_width=True)
+                        st.table(table_data.set_index('년도'))
                     else:
                         st.markdown(f"  - 해당 학과에 대한 2023-2024학년도 입시 데이터가 없습니다.")
 

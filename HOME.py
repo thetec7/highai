@@ -9,10 +9,10 @@ st.set_page_config(
     layout="centered"
 )
 
-st.markdown("<h1 style='text-align: center; font-size: 5em; display: block; margin: 0 auto;'>HighAI</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 1.4em; display: block; margin: 0 auto;'>무엇을 도와드릴까요?</p>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #2C3E50; font-size: 5em; display: block; margin: 0 auto;'>HighAI</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 1.4em; color: #555; display: block; margin: 0 auto;'>무엇을 도와드릴까요?</p>", unsafe_allow_html=True)
 
-st.markdown("<br> <br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 
 with st.container():
     col1, col2, col3, col4, col5 = st.columns(5)
@@ -32,6 +32,11 @@ with st.container():
         if st.button("정시 전형 대학 찾기", use_container_width=True):
             st.switch_page("pages/5_정시 전형 대학 찾기.py")
 
-st.markdown("<br> <br>", unsafe_allow_html=True)
-
-st.markdown("<p style='text-align: center; font-size: 0.75em; color: #7F8C8D;'>© 2025 HighAI. All rights reserved.</p>", unsafe_allow_html=True)
+st.markdown("""
+<div style='text-align: center; margin-top: 50px;'>
+    <p style='color:#696969; font-size:14px;'>
+        Developed by <strong>IYT</strong><br>
+        Contact: <a href="mailto:488pista@daum.net" style="color:#696969; text-decoration:none;">488pista@daum.net</a>
+    </p>
+</div>
+""", unsafe_allow_html=True)

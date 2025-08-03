@@ -13,7 +13,7 @@ st.set_page_config(
     layout="centered"
 )
 
-def askGpt(prompt, api_key):
+def ask_gpt(prompt, api_key):
     client = OpenAI(api_key=api_key)
     response = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -21,13 +21,12 @@ def askGpt(prompt, api_key):
     )
     return response.choices[0].message.content
 
-def parse_gpt_response(response):
+def gpt_response(response):
     pattern = r"\d+\.\s\*\*(.+?)\*\*\n\s*-\s*핵심 개념:\s*(.+?)\n\s*-\s*탐구 방법:\s*(.+?)(?=\n\d+\.|\Z)"
     matches = re.findall(pattern, response, re.DOTALL)
     return matches
 
 def main():
-    st.set_page_config(page_title="탐구 주제 찾기")
     st.title("💬 탐구 주제 찾기")
     st.caption("✅ 관심 있는 교과목과 주제, 본인의 학년, 선호하는 탐구 방식을 모두 입력하고 '탐구 주제 검색' 버튼을 눌러주세요.")
 
@@ -68,8 +67,8 @@ def main():
 ※ 현실적으로 수행 가능한 고등학생 수준의 탐구를 기반으로, 교육과정 및 대입 전형에서 활용 가능한 방식으로 제안해주세요.
 """
 
-            gpt_response = askGpt(prompt, API_KEY)
-            parsed = parse_gpt_response(gpt_response)
+            gpt_response = ask_gpt(prompt, API_KEY)
+            parsed = gpt_response(gpt_response)
 
             if parsed:
                 st.markdown("---")

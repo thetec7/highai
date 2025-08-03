@@ -103,7 +103,7 @@ def main():
                         (df['년도'].between(2023, 2024))
                     ].sort_values(by='년도', ascending=False)
 
-                    st.markdown(f"#### 🎓 **{university_name} - {major_name}**")
+                    st.markdown(f"##### 🎓 **{university_name} - {major_name}**")
 
                     if not past_data.empty:
                         table_data = past_data[['년도', '전형명', '합격 백분위']].rename(columns={

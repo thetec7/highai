@@ -6,9 +6,6 @@ import re
 
 API_KEY = st.secrets["openai_api_key"]
 
-with st.sidebar:
-    st.subheader("HighAI")
-
 st.set_page_config(
     page_title="HighAI",
     page_icon="🎓",

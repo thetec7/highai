@@ -1,20 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-with st.sidebar:
-    st.subheader("HighAI")
-
-def set_og_tags():
-    og_tags = f"""
-    <meta property="og:title" content="HighAI">
-    <meta property="og:description" content="고등학생을 위한 진로진학 AI">
-    <meta property="og:image" content="data/highai.png">
-    <meta property="og:url" content="https://highai.kr/">
-    """
-    components.html(f"<head>{og_tags}</head>", height=0)
-
-set_og_tags()
-
 st.set_page_config(
     page_title="HighAI",
     page_icon="🎓",

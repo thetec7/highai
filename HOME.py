@@ -7,6 +7,17 @@ st.set_page_config(
     layout="centered"
 )
 
+def set_og_tags():
+    html_code = """
+    <meta property="og:title" content="HighAI">
+    <meta property="og:description" content="고등학생을 위한 맞춤형 진로진학 AI">
+    <meta property="og:image" content="data/highai.png">
+    """
+    components.html(f"<head>{html_code}</head>", height=0, width=0)
+
+set_og_tags()
+
+
 st.markdown("<h1 style='text-align: center; color: #2C3E50; font-size: 5em; display: block; margin: 0 auto;'>HighAI</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 1.4em; color: #555; display: block; margin: 0 auto;'>무엇을 도와드릴까요?</p>", unsafe_allow_html=True)
 

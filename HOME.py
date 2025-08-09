@@ -5,7 +5,8 @@ st.set_page_config(
     page_icon="🎓",
     layout="centered"
 )
-col1, col2, col3 = st.columns([2, 3, 2])
+
+col1, col2, col3 = st.columns([1, 3, 1])
 with col2:
     st.image("data/highai.png")
 
@@ -23,10 +24,9 @@ with col2:
         if st.button("특별 전형 대학 찾기", use_container_width=True):
             st.switch_page("pages/6_특별 전형 대학 찾기.py")
         
-
 st.markdown("""
 <div style='text-align: center; margin-top: 50px;'>
-    <p style='color:#696969; f`ont-size:14px;'>
+    <p style='color:#696969; f`ont-size:12px;'>
         Developed by <strong>IYT</strong><br>
         Contact: <a href="mailto:488pista@daum.net" style="color:#696969; text-decoration:none;">488pista@daum.net</a>
     </p>

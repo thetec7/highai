@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
 st.set_page_config(
     page_title="HighAI",
@@ -13,22 +12,23 @@ st.markdown("<p style='text-align: center; font-size: 1.4em; color: #555; displa
 st.markdown("<br>", unsafe_allow_html=True)
 
 with st.container():
-    col1, col2, col3, col4, col5 = st.columns(5)
+    col1, col2, col3 = st.columns(3)
     with col1:
         if st.button("진로 직업 추천 받기", use_container_width=True):
             st.switch_page("pages/1_진로 추천 받기.py")
-    with col2:
         if st.button("심화 탐구 주제 찾기", use_container_width=True):
             st.switch_page("pages/2_탐구 주제 찾기.py")
-    with col3:
+    with col2:
         if st.button("교과 전형 대학 찾기", use_container_width=True):
             st.switch_page("pages/3_교과 전형 대학 찾기.py")
-    with col4:
         if st.button("종합 전형 대학 찾기", use_container_width=True):
             st.switch_page("pages/4_종합 전형 대학 찾기.py")
-    with col5:
+    with col3:
         if st.button("정시 전형 대학 찾기", use_container_width=True):
             st.switch_page("pages/5_정시 전형 대학 찾기.py")
+        if st.button("특별 전형 대학 찾기", use_container_width=True):
+            st.switch_page("pages/6_특별 전형 대학 찾기.py")
+        
 
 st.markdown("""
 <div style='text-align: center; margin-top: 50px;'>

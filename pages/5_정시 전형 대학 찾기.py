@@ -31,7 +31,7 @@ def main():
 
     col1, col2 = st.columns(2)
     with col1:
-        major_input = st.text_input("희망 전공", placeholder="예: 컴퓨터공학 / 기계공학 / 역사")
+        major_input = st.text_input("희망 전공", placeholder="예: 컴퓨터공학 / 생명과학 / 역사")
     with col2:
         grade_input = st.text_input("모의고사 백분위 평균", placeholder="예: 85.5 (소수점 첫째 자리까지)")
 
@@ -86,7 +86,7 @@ def main():
             unique_related_majors = list(dict.fromkeys(related_majors))
 
             display_related = [m for m in unique_related_majors if m and m.lower() != major_input.lower()]
-            display_related = display_related[:6]
+            display_related = display_related[:10]
 
             major_pattern = '|'.join(re.escape(m) for m in unique_related_majors)
 
@@ -109,17 +109,13 @@ def main():
             result_2024 = grade_filter_2024 \
                 .sort_values(by=['match_priority', '백분위_차이']) \
                 .drop_duplicates(subset=['대학명', '학과명']) \
-                .head(10)
+                .head(12)
 
             with result_container:
                 st.markdown("<p style='color:#696969 ; font-size:12px;'>"
                     f"작성하신 <b>[{major_input}]</b> 관련 학과에는 "
                     + ", ".join(display_related)
-                    + " 등이 있습니다."
-                "</p>", unsafe_allow_html=True)
-
-                st.markdown("<p style='color:#696969 ; font-size:12px;'>" \
-                "정시 전형은 수능 반영 과목, 영역별 반영 비율, 가산점, 한국사, 영어 반영 방식 등 세부 기준이 대학마다 다릅니다. 반드시 대학별 모집요강을 면밀히 검토하고 선생님과의 심층 상담을 통하여 최적화된 지원 전략을 수립하는 것이 바람직합니다."
+                    + " 등이 있습니다. 정시 전형은 수능 반영 과목, 영역별 반영 비율, 가산점, 한국사, 영어 반영 방식 등 세부 기준이 대학마다 다릅니다. 반드시 대학별 모집요강을 면밀히 검토하고 선생님과의 심층 상담을 통하여 최적화된 지원 전략을 수립하는 것이 바람직합니다."
                 "</p>", unsafe_allow_html=True)
 
                 for index, row_2024 in result_2024.iterrows():

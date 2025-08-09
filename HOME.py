@@ -5,22 +5,23 @@ st.set_page_config(
     page_icon="🎓",
     layout="centered"
 )
+col1, col2, col3 = st.columns([2, 3, 2])
+with col2:
+    st.image("data/highai.png")
 
-st.markdown("<h1 style='text-align: center; color: #2C3E50; font-size: 5em; display: block; margin: 0 auto;'>HighAI</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 1.4em; color: #555; display: block; margin: 0 auto;'>무엇을 도와드릴까요?</p>", unsafe_allow_html=True)
-
-if st.button("진로 직업 추천 받기", use_container_width=True):
-    st.switch_page("pages/1_진로 추천 받기.py")
-if st.button("심화 탐구 주제 찾기", use_container_width=True):
-    st.switch_page("pages/2_탐구 주제 찾기.py")
-if st.button("교과 전형 대학 찾기", use_container_width=True):
-    st.switch_page("pages/3_교과 전형 대학 찾기.py")
-if st.button("종합 전형 대학 찾기", use_container_width=True):
-    st.switch_page("pages/4_종합 전형 대학 찾기.py")
-if st.button("정시 전형 대학 찾기", use_container_width=True):
-    st.switch_page("pages/5_정시 전형 대학 찾기.py")
-if st.button("특별 전형 대학 찾기", use_container_width=True):
-    st.switch_page("pages/6_특별 전형 대학 찾기.py")
+    with st.expander("무엇을 도와드릴까요?"):
+        if st.button("진로 직업 추천 받기", use_container_width=True):
+            st.switch_page("pages/1_진로 추천 받기.py")
+        if st.button("심화 탐구 주제 찾기", use_container_width=True):
+            st.switch_page("pages/2_탐구 주제 찾기.py")
+        if st.button("교과 전형 대학 찾기", use_container_width=True):
+            st.switch_page("pages/3_교과 전형 대학 찾기.py")
+        if st.button("종합 전형 대학 찾기", use_container_width=True):
+            st.switch_page("pages/4_종합 전형 대학 찾기.py")
+        if st.button("정시 전형 대학 찾기", use_container_width=True):
+            st.switch_page("pages/5_정시 전형 대학 찾기.py")
+        if st.button("특별 전형 대학 찾기", use_container_width=True):
+            st.switch_page("pages/6_특별 전형 대학 찾기.py")
         
 
 st.markdown("""
